@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/purple_700"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_1"
+        android:backgroundTint="@color/blue_500"
+        style="@style/Theme.APIQueryApplication.BtnMain"
+        android:text="@string/posts"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:backgroundTint="@color/orange_500"
+        style="@style/Theme.APIQueryApplication.BtnMain"
+        android:text="@string/comments" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:backgroundTint="@color/red_500"
+        style="@style/Theme.APIQueryApplication.BtnMain"
+        android:text="@string/user" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:backgroundTint="@color/green_500"
+        style="@style/Theme.APIQueryApplication.BtnMain"
+        android:text="@string/todos" />
+
+</LinearLayout>
