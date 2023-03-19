@@ -11,9 +11,11 @@ public class UserRepository {
     private Map<Integer, User> usersMap;
 
     private static UserRepository instance = null;
+
     private UserRepository() {
         this.usersMap = new HashMap<>();
     }
+
     public static UserRepository getInstance() {
         if (instance == null) {
             instance = new UserRepository();
@@ -30,9 +32,11 @@ public class UserRepository {
     public boolean contains(User user) {
         return this.usersMap.containsValue(user);
     }
+
     public boolean contains(Integer id) {
         return this.usersMap.containsKey(id);
     }
+
     public Collection<User> getUsers() {
         return this.usersMap.values();
     }

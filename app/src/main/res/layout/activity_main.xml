@@ -34,4 +34,16 @@
         style="@style/Theme.APIQueryApplication.BtnMain"
         android:text="@string/todos" />
 
+    <Button
+        android:id="@+id/btn_5"
+        android:backgroundTint="@color/pink_500"
+        style="@style/Theme.APIQueryApplication.BtnMain"
+        android:text="@string/photos" />
+
+    <Button
+        android:id="@+id/btn_6"
+        android:backgroundTint="@color/yellow_500"
+        style="@style/Theme.APIQueryApplication.BtnMain"
+        android:text="@string/albums" />
+
 </LinearLayout>

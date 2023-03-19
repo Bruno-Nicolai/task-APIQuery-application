@@ -9,11 +9,12 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_comments"
         style="@style/Theme.APIQueryApplication.Toolbar"
+        android:background="@color/orange_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-        app:titleTextColor="@color/purple_200" />
+        app:titleTextColor="@color/orange_900" />
 
     <Button
         android:id="@+id/comments_btn_search_all"

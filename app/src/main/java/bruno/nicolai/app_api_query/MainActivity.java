@@ -30,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
             goToTodosScreen();
         });
 
+        binding.btn5.setOnClickListener(view -> {
+            goToPhotosScreen();
+        });
+        binding.btn6.setOnClickListener(view -> {
+            goToAlbumsScreen();
+        });
+
     }
 
     private void goToPostsScreen() {
@@ -49,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void goToTodosScreen() {
         Intent i = new Intent(getApplicationContext(), TodosActivity.class);
+        startActivity(i);
+    }
+
+    private void goToPhotosScreen() {
+        Intent i = new Intent(getApplicationContext(), PhotosActivity.class);
+        startActivity(i);
+    }
+
+    private void goToAlbumsScreen() {
+        Intent i = new Intent(getApplicationContext(), AlbumsActivity.class);
         startActivity(i);
     }
 

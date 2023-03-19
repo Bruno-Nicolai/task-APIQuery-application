@@ -5,8 +5,12 @@
     <string name="comments">Comments</string>
     <string name="user">Users</string>
     <string name="todos">To-do</string>
+    <string name="photos">Photos</string>
+    <string name="albums">Albums</string>
     <string name="getAllPosts">Get All Posts</string>
     <string name="getAllComments">Get All Comments</string>
     <string name="getAllUsers">Get All Users</string>
     <string name="getAllTodos">Get All Todos</string>
+    <string name="getAllPhotos">Get All Photos</string>
+    <string name="getAllAlbums">Get All Albums</string>
 </resources>

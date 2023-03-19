@@ -5,10 +5,6 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.Response;
-
-import org.json.JSONArray;
-
 import java.util.ArrayList;
 import java.util.List;
 
