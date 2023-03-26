@@ -2,12 +2,17 @@ package bruno.nicolai.app_api_query;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import bruno.nicolai.app_api_query.adapters.UsersAdapter;
 import bruno.nicolai.app_api_query.databinding.ActivityUsersBinding;
 import bruno.nicolai.app_api_query.models.User;
 import bruno.nicolai.app_api_query.repositories.UserRepository;
@@ -61,16 +66,37 @@ public class UsersActivity extends AppCompatActivity /*implements Response.Liste
 //        queue.add(request);
 
 
-        binding.usersBtnSearchAll.setOnClickListener(view -> {
-            getAllUsers();
-        });
+
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_toolbar_actions, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (item.getItemId() == R.id.action_show_recycler) {
+            getAllUsers();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     private void getAllUsers() {
 
-        UserService.getAllUsers(this, () -> System.out.println("API: " + UserRepository.getInstance().getUsers()));
+        UserService.getAllUsers(this, () -> {
+//            System.out.println("API: " + UserRepository.getInstance().getUsers());
+            UsersAdapter adapter = new UsersAdapter(new ArrayList(UserRepository.getInstance().getUsers()));
+            binding.rvUsers.setAdapter(adapter);
+
+            LinearLayoutManager llm = new LinearLayoutManager(this);
+            binding.rvUsers.setLayoutManager(llm);
+
+        });
 
     }
 /*

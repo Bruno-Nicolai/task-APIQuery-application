@@ -13,4 +13,5 @@
     <string name="getAllTodos">Get All Todos</string>
     <string name="getAllPhotos">Get All Photos</string>
     <string name="getAllAlbums">Get All Albums</string>
+    <string name="details">Details</string>
 </resources>
