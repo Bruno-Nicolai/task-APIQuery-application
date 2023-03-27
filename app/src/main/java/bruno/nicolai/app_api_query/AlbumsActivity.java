@@ -22,9 +22,9 @@ public class AlbumsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityAlbumsBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_albums);
+        setContentView(binding.getRoot());
 
-        binding.toolbarAlbums.setTitle(R.string.user);
+        binding.toolbarAlbums.setTitle(R.string.albums);
         binding.toolbarAlbums.setNavigationOnClickListener(view -> {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);

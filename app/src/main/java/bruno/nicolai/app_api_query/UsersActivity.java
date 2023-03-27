@@ -66,24 +66,10 @@ public class UsersActivity extends AppCompatActivity /*implements Response.Liste
 //        queue.add(request);
 
 
-
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_toolbar_actions, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if (item.getItemId() == R.id.action_show_recycler) {
+        binding.usersBtnSearchAll.setOnClickListener(view -> {
             getAllUsers();
-        }
+        });
 
-        return super.onOptionsItemSelected(item);
     }
 
     private void getAllUsers() {
@@ -99,15 +85,4 @@ public class UsersActivity extends AppCompatActivity /*implements Response.Liste
         });
 
     }
-/*
-    @Override
-    public void onErrorResponse(VolleyError error) {
-    }
-
-    @Override
-    public void onResponse(JSONArray response) {
-
-    }
-*/
-
 }

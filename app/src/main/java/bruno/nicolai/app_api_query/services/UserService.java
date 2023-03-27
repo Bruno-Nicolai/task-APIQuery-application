@@ -12,6 +12,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import bruno.nicolai.app_api_query.models.Address;
+import bruno.nicolai.app_api_query.models.Geo;
 import bruno.nicolai.app_api_query.models.User;
 import bruno.nicolai.app_api_query.repositories.UserRepository;
 
@@ -30,6 +31,7 @@ public class UserService {
                     json.getString("phone"),
                     json.getString("website")
             );
+            /*
             if (json.has("address")) {
                 JSONObject jsonAddress = json.getJSONObject("address");
                 JSONObject jsonGeo = json.getJSONObject("geo");
@@ -37,6 +39,7 @@ public class UserService {
                 Address address = new Address("", "", "", "", null);
                 user.setAddress(address);
             }
+            */
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
