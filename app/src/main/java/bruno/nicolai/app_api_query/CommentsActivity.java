@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import bruno.nicolai.app_api_query.adapters.CommentsAdapter;
 import bruno.nicolai.app_api_query.databinding.ActivityCommentsBinding;
 import bruno.nicolai.app_api_query.models.Comment;
 import bruno.nicolai.app_api_query.repositories.CommentRepository;
@@ -38,8 +40,13 @@ public class CommentsActivity extends AppCompatActivity {
 
     private void getAllComments() {
 
-        CommentService.getAllComments(this, () -> System.out.println("API: " + CommentRepository.getInstance().getComments()));
+        CommentService.getAllComments(this, () -> {
+            CommentsAdapter adapter = new CommentsAdapter(new ArrayList(CommentRepository.getInstance().getComments()));
+            binding.rvComments.setAdapter(adapter);
+
+            LinearLayoutManager llm = new LinearLayoutManager(this);
+            binding.rvComments.setLayoutManager(llm);
+        });
 
     }
-
 }

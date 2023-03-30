@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import bruno.nicolai.app_api_query.adapters.TodosAdapter;
 import bruno.nicolai.app_api_query.databinding.ActivityTodosBinding;
 import bruno.nicolai.app_api_query.models.Todo;
 import bruno.nicolai.app_api_query.repositories.TodoRepository;
@@ -38,7 +40,14 @@ public class TodosActivity extends AppCompatActivity {
 
     private void getAllTodos() {
 
-        TodoService.getAllTodos(this, () -> System.out.println("API: " + TodoRepository.getInstance().getTodos()));
+        TodoService.getAllTodos(this, () -> {
+            TodosAdapter adapter = new TodosAdapter(new ArrayList(TodoRepository.getInstance().getTodos()));
+            binding.rvTodos.setAdapter(adapter);
+
+            LinearLayoutManager llm = new LinearLayoutManager(this);
+            binding.rvTodos.setLayoutManager(llm);
+
+        });
 
     }
 }

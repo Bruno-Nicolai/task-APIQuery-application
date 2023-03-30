@@ -20,9 +20,18 @@
         android:id="@+id/todos_btn_search_all"
         style="@style/Theme.APIQueryApplication.Button"
         android:text="@string/getAllTodos"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_todos" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_todos"
+        app:layout_constraintTop_toBottomOf="@+id/todos_btn_search_all"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_todo"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

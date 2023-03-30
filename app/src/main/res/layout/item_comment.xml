@@ -6,43 +6,28 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/tv_name_user"
+        android:id="@+id/tv_name_comment"
         style="@style/Theme.APIQueryApplication.ItemViewTextViewBold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Name" />
 
     <TextView
-        android:id="@+id/tv_username_user"
+        android:id="@+id/tv_email_comment"
         style="@style/Theme.APIQueryApplication.ItemViewTextView"
-        app:layout_constraintStart_toEndOf="@+id/tv_name_user"
+        app:layout_constraintStart_toEndOf="@+id/tv_name_comment"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Username" />
+        tools:text="Name" />
 
     <TextView
-        android:id="@+id/tv_email_user"
-        style="@style/Theme.APIQueryApplication.ItemViewTextView"
+        android:id="@+id/tv_body_comment"
+        style="@style/Theme.APIQueryApplication.ItemViewTextViewBold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name_user"
-        tools:text="Email" />
-
-    <TextView
-        android:id="@+id/tv_phone_user"
-        style="@style/Theme.APIQueryApplication.ItemViewTextView"
-        app:layout_constraintStart_toEndOf="@+id/tv_email_user"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name_user"
-        tools:text="Phone" />
-
-    <TextView
-        android:id="@+id/tv_website_user"
-        style="@style/Theme.APIQueryApplication.ItemViewTextView"
-        app:layout_constraintStart_toEndOf="@+id/tv_phone_user"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name_user"
-        tools:text="Website" />
-
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_comment"
+        tools:text="Body" />
 
     <View
-        app:layout_constraintTop_toBottomOf="@+id/tv_email_user"
+        app:layout_constraintTop_toBottomOf="@+id/tv_body_comment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="6dp"
@@ -51,6 +36,6 @@
         android:layout_marginEnd="20dp"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/red_900" />
+        android:background="@color/orange_900" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
