@@ -1,25 +1,25 @@
 package bruno.nicolai.app_api_query.views;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-
-import java.util.ArrayList;
-import java.util.List;
+import androidx.recyclerview.widget.RecyclerView;
 
 import bruno.nicolai.app_api_query.R;
-import bruno.nicolai.app_api_query.adapters.CommentsAdapter;
 import bruno.nicolai.app_api_query.databinding.ActivityCommentsBinding;
-import bruno.nicolai.app_api_query.models.Comment;
-import bruno.nicolai.app_api_query.repositories.CommentRepository;
-import bruno.nicolai.app_api_query.services.CommentService;
+import bruno.nicolai.app_api_query.presenters.CommentPresenter;
+import bruno.nicolai.app_api_query.presenters.CommentPresenterInterface;
 
-public class CommentsActivity extends AppCompatActivity {
+public class CommentsActivity extends AppCompatActivity implements CommentPresenterInterface.View {
 
     private ActivityCommentsBinding binding;
-    private List<Comment> comments = new ArrayList<>();
+
+    private CommentPresenterInterface.Presenter presenter;
+
+    LinearLayoutManager llm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,27 +27,31 @@ public class CommentsActivity extends AppCompatActivity {
         binding = ActivityCommentsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        presenter = new CommentPresenter(this);
+
         binding.toolbarComments.setTitle(R.string.comments);
         binding.toolbarComments.setNavigationOnClickListener(view -> {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         });
 
+
         binding.commentsBtnSearchAll.setOnClickListener(view -> {
-            getAllComments();
+            presenter.getAllComments();
         });
+
+        llm = new LinearLayoutManager(this);
+        binding.rvComments.setLayoutManager(llm);
 
     }
 
-    private void getAllComments() {
+    @Override
+    public Context getContext() {
+        return getApplicationContext();
+    }
 
-        CommentService.getAllComments(this, () -> {
-            CommentsAdapter adapter = new CommentsAdapter(new ArrayList(CommentRepository.getInstance().getComments()));
-            binding.rvComments.setAdapter(adapter);
-
-            LinearLayoutManager llm = new LinearLayoutManager(this);
-            binding.rvComments.setLayoutManager(llm);
-        });
-
+    @Override
+    public void setCommentsAdapter(RecyclerView.Adapter adapter) {
+        binding.rvComments.setAdapter(adapter);
     }
 }

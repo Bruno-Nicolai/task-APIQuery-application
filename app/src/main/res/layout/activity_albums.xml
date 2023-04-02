@@ -20,9 +20,18 @@
         android:id="@+id/albums_btn_search_all"
         style="@style/Theme.APIQueryApplication.Button"
         android:text="@string/getAllAlbums"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_albums" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_albums"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@+id/albums_btn_search_all"
+        tools:listitem="@layout/item_album" />
+    
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,10 +6,10 @@ import bruno.nicolai.app_api_query.adapters.UsersAdapter;
 import bruno.nicolai.app_api_query.repositories.UserRepository;
 import bruno.nicolai.app_api_query.services.UserService;
 
-public class UserPresenter implements PresenterInterface.Presenter {
+public class UserPresenter implements UserPresenterInterface.Presenter {
 
-    PresenterInterface.View view;
-    public UserPresenter(PresenterInterface.View view) {
+    UserPresenterInterface.View view;
+    public UserPresenter(UserPresenterInterface.View view) {
         this.view = view;
     }
 

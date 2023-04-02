@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import bruno.nicolai.app_api_query.adapters.UsersAdapter;
 import bruno.nicolai.app_api_query.repositories.UserRepository;
 
-public interface PresenterInterface {
+public interface UserPresenterInterface {
 
     interface View {
 

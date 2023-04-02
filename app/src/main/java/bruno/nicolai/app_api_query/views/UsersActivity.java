@@ -10,14 +10,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import bruno.nicolai.app_api_query.R;
 import bruno.nicolai.app_api_query.databinding.ActivityUsersBinding;
-import bruno.nicolai.app_api_query.presenters.PresenterInterface;
+import bruno.nicolai.app_api_query.presenters.UserPresenterInterface;
 import bruno.nicolai.app_api_query.presenters.UserPresenter;
 
-public class UsersActivity extends AppCompatActivity implements PresenterInterface.View {
+public class UsersActivity extends AppCompatActivity implements UserPresenterInterface.View {
 
     private ActivityUsersBinding binding;
 
-    private PresenterInterface.Presenter presenter;
+    private UserPresenterInterface.Presenter presenter;
 
     LinearLayoutManager llm;
 
@@ -36,14 +36,15 @@ public class UsersActivity extends AppCompatActivity implements PresenterInterfa
             startActivity(intent);
         });
 
-        llm = new LinearLayoutManager(this);
-        binding.rvUsers.setLayoutManager(llm);
-
         binding.usersBtnSearchAll.setOnClickListener(view -> {
             presenter.getAllUsers();
         });
 
+        llm = new LinearLayoutManager(this);
+        binding.rvUsers.setLayoutManager(llm);
+
     }
+
 
     @Override
     public Context getContext() {
