@@ -2,19 +2,24 @@ package bruno.nicolai.app_api_query.models;
 
 public class Todo {
 
-    private int userId, id;
+    private User user;
+    private int id;
     private String title;
     private Boolean completed;
 
-    public Todo(int userId, int id, String title, Boolean completed) {
-        this.userId = userId;
+    public Todo(User user, int id, String title, Boolean completed) {
+        this.user = user;
         this.id = id;
         this.title = title;
         this.completed = completed;
     }
 
-    public int getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getId() {
@@ -40,10 +45,10 @@ public class Todo {
     @Override
     public String toString() {
         return "Todo{" +
-                "title='" + title + '\'' +
-                ", user id=" + userId +
-                ", id=" + id +
-                ", completed='" + completed + '\'' +
+                "title='" + this.title + '\'' +
+                ", user id=" + user.getId() +
+                ", id=" + this.id +
+                ", completed='" + this.completed + '\'' +
                 '}';
     }
 }

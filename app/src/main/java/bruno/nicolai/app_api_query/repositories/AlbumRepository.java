@@ -41,4 +41,7 @@ public class AlbumRepository {
         return this.albumsMap.values();
     }
 
+    public Album getAlbum(int id) {
+        return this.albumsMap.get(id);
+    }
 }

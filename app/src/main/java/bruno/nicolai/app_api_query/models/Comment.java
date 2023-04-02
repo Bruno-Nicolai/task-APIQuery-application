@@ -2,23 +2,28 @@ package bruno.nicolai.app_api_query.models;
 
 public class Comment {
 
-    private int postId, id;
+    private int id;
+    private Post post;
     private String name, email, body;
 
-    public Comment(int postId, int id, String name, String email, String body) {
-        this.postId = postId;
+    public Comment(int id, Post post, String name, String email, String body) {
         this.id = id;
+        this.post = post;
         this.name = name;
         this.email = email;
         this.body = body;
     }
 
-    public int getPostId() {
-        return postId;
-    }
-
     public int getId() {
         return id;
+    }
+
+    public Post getPost() {
+        return post;
+    }
+
+    public void setPost(Post post) {
+        this.post = post;
     }
 
     public String getName() {
@@ -49,7 +54,7 @@ public class Comment {
     public String toString() {
         return "Comment{" +
                 "id='" + id + '\'' +
-                ", post id=" + postId +
+                ", post id=" + post.getId() +
                 ", name=" + name +
                 ", email=" + email +
                 ", body='" + body + '\'' +

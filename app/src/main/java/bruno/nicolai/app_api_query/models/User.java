@@ -85,9 +85,9 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                ", email='" + email + '\'' +
+                "name='" + this.name + '\'' +
+                ", id=" + this.id +
+                ", email='" + this.email + '\'' +
                 '}';
     }
 }

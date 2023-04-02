@@ -12,7 +12,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import bruno.nicolai.app_api_query.models.Todo;
+import bruno.nicolai.app_api_query.models.User;
 import bruno.nicolai.app_api_query.repositories.TodoRepository;
+import bruno.nicolai.app_api_query.repositories.UserRepository;
 
 public class TodoService {
 
@@ -22,11 +24,14 @@ public class TodoService {
         try {
 
             todo = new Todo(
-                    json.getInt("userId"),
+                    null,
                     json.getInt("id"),
                     json.getString("title"),
                     json.getBoolean("completed")
             );
+            User user = UserRepository.getInstance().getUser(json.getInt("userId"));
+            todo.setUser(user);
+
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }

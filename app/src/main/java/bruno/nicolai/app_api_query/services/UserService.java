@@ -14,6 +14,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import bruno.nicolai.app_api_query.models.Address;
+import bruno.nicolai.app_api_query.models.Company;
 import bruno.nicolai.app_api_query.models.Geo;
 import bruno.nicolai.app_api_query.models.User;
 import bruno.nicolai.app_api_query.repositories.UserRepository;
@@ -59,6 +60,26 @@ public class UserService {
 
     }
 
+    public static Company companyFromJson(JSONObject json) {
+
+        Company company = null;
+
+        try {
+
+            company = new Company(
+                    json.getString("name"),
+                    json.getString("catchPhrase"),
+                    json.getString("bs")
+            );
+
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+
+        return company;
+
+    }
+
     public static User userFromJson(JSONObject json) {
 
         User user = null;
@@ -77,8 +98,13 @@ public class UserService {
 //                Address address = new Address("", "", "", "", null);
                 Address address = addressFromJson(jsonAddress);
                 user.setAddress(address);
-
             }
+            if (json.has("company")) {
+                JSONObject jsonCompany = json.getJSONObject("company");
+                Company company = companyFromJson(jsonCompany);
+                user.setCompany(company);
+            }
+
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }

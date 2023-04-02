@@ -12,7 +12,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import bruno.nicolai.app_api_query.models.Album;
+import bruno.nicolai.app_api_query.models.User;
 import bruno.nicolai.app_api_query.repositories.AlbumRepository;
+import bruno.nicolai.app_api_query.repositories.UserRepository;
 
 public class AlbumService {
 
@@ -20,11 +22,15 @@ public class AlbumService {
 
         Album album = null;
         try {
+
             album = new Album(
-                    json.getInt("userId"),
+                    null,
                     json.getInt("id"),
                     json.getString("title")
             );
+            User user = UserRepository.getInstance().getUser(json.getInt("userId"));
+            album.setUser(user);
+
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }

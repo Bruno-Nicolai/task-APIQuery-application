@@ -2,17 +2,22 @@ package bruno.nicolai.app_api_query.models;
 
 public class Album {
 
-    private int userId, id;
+    private User user;
+    private int id;
     private String title;
 
-    public Album(int userId, int id, String title) {
-        this.userId = userId;
+    public Album(User user, int id, String title) {
+        this.user = user;
         this.id = id;
         this.title = title;
     }
 
-    public int getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getId() {

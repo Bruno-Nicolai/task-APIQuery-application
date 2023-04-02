@@ -12,7 +12,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import bruno.nicolai.app_api_query.models.Comment;
+import bruno.nicolai.app_api_query.models.Post;
 import bruno.nicolai.app_api_query.repositories.CommentRepository;
+import bruno.nicolai.app_api_query.repositories.PostRepository;
 
 public class CommentService {
 
@@ -23,11 +25,14 @@ public class CommentService {
 
             comment = new Comment(
                     json.getInt("id"),
-                    json.getInt("postId"),
+                    null,
                     json.getString("name"),
                     json.getString("email"),
                     json.getString("body")
             );
+            Post post = PostRepository.getInstance().getPost(json.getInt("postId"));
+            comment.setPost(post);
+
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }

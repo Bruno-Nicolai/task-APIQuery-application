@@ -11,7 +11,9 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import bruno.nicolai.app_api_query.models.Album;
 import bruno.nicolai.app_api_query.models.Photo;
+import bruno.nicolai.app_api_query.repositories.AlbumRepository;
 import bruno.nicolai.app_api_query.repositories.PhotoRepository;
 
 public class PhotoService {
@@ -22,12 +24,15 @@ public class PhotoService {
         try {
 
             photo = new Photo(
-                    json.getInt("albumId"),
+                    null,
                     json.getInt("id"),
                     json.getString("title"),
                     json.getString("url"),
                     json.getString("thumbnailUrl")
             );
+            Album album = AlbumRepository.getInstance().getAlbum(json.getInt("albumId"));
+            photo.setAlbum(album);
+
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }

@@ -41,4 +41,8 @@ public class PostRepository {
         return this.postsMap.values();
     }
 
+    public Post getPost(int id) {
+        return this.postsMap.get(id);
+    }
+
 }
