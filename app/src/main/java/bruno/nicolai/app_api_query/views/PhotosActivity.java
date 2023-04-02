@@ -1,21 +1,19 @@
-package bruno.nicolai.app_api_query;
+package bruno.nicolai.app_api_query.views;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import bruno.nicolai.app_api_query.R;
 import bruno.nicolai.app_api_query.adapters.PhotosAdapter;
-import bruno.nicolai.app_api_query.adapters.TodosAdapter;
 import bruno.nicolai.app_api_query.databinding.ActivityPhotosBinding;
 import bruno.nicolai.app_api_query.models.Photo;
 import bruno.nicolai.app_api_query.repositories.PhotoRepository;
-import bruno.nicolai.app_api_query.repositories.TodoRepository;
 import bruno.nicolai.app_api_query.services.PhotoService;
 
 public class PhotosActivity extends AppCompatActivity {

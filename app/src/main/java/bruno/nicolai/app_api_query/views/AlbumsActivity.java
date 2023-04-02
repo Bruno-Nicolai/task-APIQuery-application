@@ -1,4 +1,4 @@
-package bruno.nicolai.app_api_query;
+package bruno.nicolai.app_api_query.views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import bruno.nicolai.app_api_query.R;
 import bruno.nicolai.app_api_query.databinding.ActivityAlbumsBinding;
 import bruno.nicolai.app_api_query.models.Album;
 import bruno.nicolai.app_api_query.repositories.AlbumRepository;

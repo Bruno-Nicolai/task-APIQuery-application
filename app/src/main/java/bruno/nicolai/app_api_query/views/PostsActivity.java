@@ -1,4 +1,4 @@
-package bruno.nicolai.app_api_query;
+package bruno.nicolai.app_api_query.views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,12 +9,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import java.util.ArrayList;
 import java.util.List;
 
+import bruno.nicolai.app_api_query.R;
 import bruno.nicolai.app_api_query.adapters.PostsAdapter;
-import bruno.nicolai.app_api_query.adapters.TodosAdapter;
 import bruno.nicolai.app_api_query.databinding.ActivityPostsBinding;
 import bruno.nicolai.app_api_query.models.Post;
 import bruno.nicolai.app_api_query.repositories.PostRepository;
-import bruno.nicolai.app_api_query.repositories.TodoRepository;
 import bruno.nicolai.app_api_query.services.PostService;
 
 public class PostsActivity extends AppCompatActivity {

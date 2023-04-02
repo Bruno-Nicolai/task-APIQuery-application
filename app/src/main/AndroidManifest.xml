@@ -16,25 +16,25 @@
         android:theme="@style/Theme.APIQueryApplication"
         tools:targetApi="31">
         <activity
-            android:name=".AlbumsActivity"
+            android:name=".views.AlbumsActivity"
             android:exported="false" />
         <activity
-            android:name=".PhotosActivity"
+            android:name=".views.PhotosActivity"
             android:exported="false" />
         <activity
-            android:name=".TodosActivity"
+            android:name=".views.TodosActivity"
             android:exported="false" />
         <activity
-            android:name=".CommentsActivity"
+            android:name=".views.CommentsActivity"
             android:exported="false" />
         <activity
-            android:name=".UsersActivity"
+            android:name=".views.UsersActivity"
             android:exported="false" />
         <activity
-            android:name=".PostsActivity"
+            android:name=".views.PostsActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".views.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

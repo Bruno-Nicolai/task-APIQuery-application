@@ -1,4 +1,4 @@
-package bruno.nicolai.app_api_query;
+package bruno.nicolai.app_api_query.views;
 
 import android.content.Intent;
 import android.os.Bundle;

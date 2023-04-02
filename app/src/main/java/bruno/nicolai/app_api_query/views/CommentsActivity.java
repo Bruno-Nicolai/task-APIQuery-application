@@ -1,4 +1,4 @@
-package bruno.nicolai.app_api_query;
+package bruno.nicolai.app_api_query.views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import java.util.ArrayList;
 import java.util.List;
 
+import bruno.nicolai.app_api_query.R;
 import bruno.nicolai.app_api_query.adapters.CommentsAdapter;
 import bruno.nicolai.app_api_query.databinding.ActivityCommentsBinding;
 import bruno.nicolai.app_api_query.models.Comment;
