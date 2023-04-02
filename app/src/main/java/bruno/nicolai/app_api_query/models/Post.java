@@ -2,18 +2,25 @@ package bruno.nicolai.app_api_query.models;
 
 public class Post {
 
-    private int userId, id;
+    private User user;
+    private int id;
     private String title, body;
 
-    public Post(int userId, int id, String title, String body) {
-        this.userId = userId;
+
+    public Post(User user, int id, String title, String body) {
+        this.user = user;
         this.id = id;
         this.title = title;
         this.body = body;
     }
 
-    public int getUserId() {
-        return userId;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getId() {
@@ -39,10 +46,10 @@ public class Post {
     @Override
     public String toString() {
         return "Post{" +
-                "title='" + title + '\'' +
-                ", user id=" + userId +
-                ", id=" + id +
-                ", body='" + body + '\'' +
+                "user=" + this.user.getName() + '\'' +
+                ", id=" + this.id +
+                ", title='" + this.title +
+                ", body='" + this.body + '\'' +
                 '}';
     }
 }

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.ArrayList;
@@ -48,6 +49,8 @@ public class PhotosActivity extends AppCompatActivity {
             PhotosAdapter adapter = new PhotosAdapter(new ArrayList(PhotoRepository.getInstance().getPhotos()));
             binding.rvPhotos.setAdapter(adapter);
 
+//            GridLayoutManager llmg = new GridLayoutManager(this, 2);
+//            binding.rvPhotos.setLayoutManager(llmg);
             LinearLayoutManager llmh = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
             binding.rvPhotos.setLayoutManager(llmh);
 

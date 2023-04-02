@@ -39,7 +39,7 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
     public void onBindViewHolder(@NonNull PhotosAdapter.ViewHolder holder, int position) {
         Photo photo = photosList.get(position);
         ImageView iv = holder.view.findViewById(R.id.iv_image_from_url);
-        Picasso.get().load(photo.getUrl()).into((ImageView) iv);
+        Picasso.get().load(photo.getUrl()).into(iv);
     }
 
     @Override

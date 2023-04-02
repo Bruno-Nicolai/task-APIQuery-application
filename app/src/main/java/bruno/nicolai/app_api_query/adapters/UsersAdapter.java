@@ -39,6 +39,8 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
         ((TextView) holder.view.findViewById(R.id.tv_email_user)).setText(user.getEmail());
         ((TextView) holder.view.findViewById(R.id.tv_phone_user)).setText(user.getPhone());
         ((TextView) holder.view.findViewById(R.id.tv_website_user)).setText(user.getWebsite());
+        ((TextView) holder.view.findViewById(R.id.tv_address_street_user)).setText(user.getAddress().getStreet());
+        ((TextView) holder.view.findViewById(R.id.tv_address_city_user)).setText(user.getAddress().getCity());
     }
 
     @Override

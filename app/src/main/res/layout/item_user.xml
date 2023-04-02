@@ -40,9 +40,21 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_name_user"
         tools:text="Website" />
 
+    <TextView
+        android:id="@+id/tv_address_street_user"
+        style="@style/Theme.APIQueryApplication.ItemViewTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email_user"
+        tools:text="Address" />
+    <TextView
+        android:id="@+id/tv_address_city_user"
+        style="@style/Theme.APIQueryApplication.ItemViewTextView"
+        app:layout_constraintStart_toEndOf="@+id/tv_address_street_user"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email_user"
+        tools:text="Address" />
 
     <View
-        app:layout_constraintTop_toBottomOf="@+id/tv_email_user"
+        app:layout_constraintTop_toBottomOf="@+id/tv_address_street_user"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="6dp"

@@ -12,7 +12,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import bruno.nicolai.app_api_query.models.Post;
+import bruno.nicolai.app_api_query.models.User;
 import bruno.nicolai.app_api_query.repositories.PostRepository;
+import bruno.nicolai.app_api_query.repositories.UserRepository;
 
 public class PostService {
 
@@ -22,11 +24,14 @@ public class PostService {
         try {
 
             post = new Post(
-                    json.getInt("userId"),
+                    null,
                     json.getInt("id"),
                     json.getString("title"),
                     json.getString("body")
             );
+            User user = UserRepository.getInstance().getUser(json.getInt("userId"));
+            post.setUser(user);
+
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
