@@ -43,7 +43,7 @@ public class UsersActivity extends AppCompatActivity implements UserPresenterInt
 
         presenter.getAllUsers();
         setSupportActionBar(binding.toolbarUsers);
-        binding.toolbarUsers.setTitle(R.string.user);
+//        binding.toolbarUsers.setTitle(R.string.user);
         binding.toolbarUsers.setNavigationOnClickListener(view -> {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
