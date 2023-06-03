@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-
     <!--MyProjectColors-->
-    <color name="gray_light">#D1D1D1</color>
-    <color name="orange_500">#FFC107</color>
-    <color name="orange_900">#F57F17</color>
-    <color name="green_500">#8BC34A</color>
+    <color name="stat_bar_color">#6A617F</color>
+    <color name="background_color">#130F1E</color>
+    <color name="black">#0B0911</color>
+    <color name="white">#E1E1E6</color>
+    <color name="gray_light">#8257E5</color>
+    <color name="gray_dark">#3C3748</color>
+
+    <color name="orange_500">#F57F17</color>
+    <color name="orange_900">#BF360C</color>
+    <color name="green_500">#69D344</color>
     <color name="green_900">#33691E</color>
-    <color name="red_500">#F44336</color>
-    <color name="red_900">#B71C1C</color>
-    <color name="blue_500">#2196F3</color>
-    <color name="blue_900">#0D47A1</color>
-    <color name="pink_500">#9C27B0</color>
-    <color name="pink_900">#880E4F</color>
-    <color name="yellow_500">#FFEB3B</color>
-    <color name="yellow_900">#BF360C</color>
+    <color name="red_500">#FD022E</color>
+    <color name="red_900">#670404</color>
+    <color name="blue_500">#44C4D3</color>
+    <color name="blue_900">#2365CA</color>
+    <color name="pink_500">#EE68D2</color>
+    <color name="pink_900">#A01C85</color>
+    <color name="yellow_500">#E6C241</color>
+    <color name="yellow_900">#82610D</color>
 
 </resources>

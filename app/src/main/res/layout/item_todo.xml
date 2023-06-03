@@ -17,6 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         style="@style/Theme.APIQueryApplication.LineHorizontal"
-        android:background="@color/green_900" />
+        android:background="@color/green_500" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

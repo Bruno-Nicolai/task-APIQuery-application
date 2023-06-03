@@ -1,7 +1,9 @@
 package bruno.nicolai.app_api_query.repositories;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import bruno.nicolai.app_api_query.models.User;
@@ -37,8 +39,9 @@ public class UserRepository {
         return this.usersMap.containsKey(id);
     }
 
-    public Collection<User> getUsers() {
-        return this.usersMap.values();
+    public List<User> getUsers() {
+//        return List.copyOf(this.usersMap.values());
+        return new ArrayList<>(this.usersMap.values());
     }
 
     public User getUser(int id) {

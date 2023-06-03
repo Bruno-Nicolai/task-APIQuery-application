@@ -6,46 +6,82 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/tv_name_user"
+        android:id="@+id/label_name"
         style="@style/Theme.APIQueryApplication.ItemViewTextViewBold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Name" />
+        android:text="Name:" />
+
+    <TextView
+        android:id="@+id/tv_name_user"
+        style="@style/Theme.APIQueryApplication.ItemViewTextView"
+        app:layout_constraintStart_toEndOf="@+id/label_name"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Bruno Nicolai" />
+
+    <TextView
+        android:id="@+id/label_username"
+        style="@style/Theme.APIQueryApplication.ItemViewTextViewBold"
+        app:layout_constraintStart_toEndOf="@+id/tv_name_user"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Username:" />
 
     <TextView
         android:id="@+id/tv_username_user"
         style="@style/Theme.APIQueryApplication.ItemViewTextView"
-        app:layout_constraintStart_toEndOf="@+id/tv_name_user"
+        app:layout_constraintStart_toEndOf="@+id/label_username"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Username" />
+        tools:text="brunocn" />
+
+    <TextView
+        android:id="@+id/label_email"
+        style="@style/Theme.APIQueryApplication.ItemViewTextViewBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_user"
+        android:text="Email" />
 
     <TextView
         android:id="@+id/tv_email_user"
         style="@style/Theme.APIQueryApplication.ItemViewTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_email"
         app:layout_constraintTop_toBottomOf="@+id/tv_name_user"
-        tools:text="Email" />
+        tools:text="bc@gmail.com" />
+
+    <TextView
+        android:id="@+id/label_phone"
+        style="@style/Theme.APIQueryApplication.ItemViewTextViewBold"
+        app:layout_constraintStart_toEndOf="@+id/tv_email_user"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_user"
+        android:text="Phone" />
 
     <TextView
         android:id="@+id/tv_phone_user"
         style="@style/Theme.APIQueryApplication.ItemViewTextView"
-        app:layout_constraintStart_toEndOf="@+id/tv_email_user"
+        app:layout_constraintStart_toEndOf="@+id/label_phone"
         app:layout_constraintTop_toBottomOf="@+id/tv_name_user"
-        tools:text="Phone" />
+        tools:text="51912433421" />
+
+    <TextView
+        android:id="@+id/label_website"
+        style="@style/Theme.APIQueryApplication.ItemViewTextViewBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email_user"
+        android:text="Website" />
 
     <TextView
         android:id="@+id/tv_website_user"
         style="@style/Theme.APIQueryApplication.ItemViewTextView"
-        app:layout_constraintStart_toEndOf="@+id/tv_phone_user"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name_user"
+        app:layout_constraintStart_toEndOf="@+id/label_website"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email_user"
         tools:text="Website" />
 
     <TextView
         android:id="@+id/tv_address_street_user"
-        style="@style/Theme.APIQueryApplication.ItemViewTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        style="@style/Theme.APIQueryApplication.ItemViewTextViewBold"
+        app:layout_constraintStart_toEndOf="@+id/tv_website_user"
         app:layout_constraintTop_toBottomOf="@+id/tv_email_user"
-        tools:text="Address" />
+        android:text="Address" />
+
     <TextView
         android:id="@+id/tv_address_city_user"
         style="@style/Theme.APIQueryApplication.ItemViewTextView"
@@ -58,6 +94,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         style="@style/Theme.APIQueryApplication.LineHorizontal"
-        android:background="@color/red_900" />
+        android:background="@color/red_500" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

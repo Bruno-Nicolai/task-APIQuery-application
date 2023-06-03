@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_sort_default"
+        app:showAsAction="never"
+        android:title="Default" />
+
+    <item
+        android:id="@+id/action_sort_ascending"
+        app:showAsAction="never"
+        android:title="Ascending" />
+
+    <item
+        android:id="@+id/action_sort_descending"
+        app:showAsAction="never"
+        android:title="Descending" />
+
+</menu>

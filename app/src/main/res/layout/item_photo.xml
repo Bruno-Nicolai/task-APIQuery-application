@@ -18,7 +18,7 @@
 
     <View
         style="@style/Theme.APIQueryApplication.LineVertical"
-        android:background="@color/pink_900"
+        android:background="@color/pink_500"
         app:layout_constraintBottom_toBottomOf="@+id/iv_image_from_url"
         app:layout_constraintStart_toEndOf="@+id/iv_image_from_url"
         app:layout_constraintTop_toTopOf="parent" />

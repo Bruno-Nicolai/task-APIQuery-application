@@ -5,45 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/purple_700"
+    android:background="@color/background_color"
     tools:context=".views.MainActivity">
-
 
     <Button
         android:id="@+id/btn_1"
-        android:backgroundTint="@color/blue_500"
         style="@style/Theme.APIQueryApplication.BtnMain"
+        android:layout_marginTop="92dp"
         android:text="@string/posts"
-        android:layout_marginTop="30dp" />
+        app:backgroundTint="@color/black"
+        app:strokeColor="@color/blue_500"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/btn_2"
-        android:backgroundTint="@color/orange_500"
         style="@style/Theme.APIQueryApplication.BtnMain"
-        android:text="@string/comments" />
+        android:text="@string/comments"
+        app:backgroundTint="@color/black"
+        app:strokeColor="@color/orange_500"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/btn_3"
-        android:backgroundTint="@color/red_500"
         style="@style/Theme.APIQueryApplication.BtnMain"
-        android:text="@string/user" />
+        android:text="@string/user"
+        app:backgroundTint="@color/black"
+        app:strokeColor="@color/red_500"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/btn_4"
-        android:backgroundTint="@color/green_500"
         style="@style/Theme.APIQueryApplication.BtnMain"
-        android:text="@string/todos" />
+        android:text="@string/todos"
+        app:backgroundTint="@color/black"
+        app:strokeColor="@color/green_500"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/btn_5"
-        android:backgroundTint="@color/pink_500"
         style="@style/Theme.APIQueryApplication.BtnMain"
-        android:text="@string/photos" />
+        android:text="@string/photos"
+        app:backgroundTint="@color/black"
+        app:strokeColor="@color/pink_500"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/btn_6"
-        android:backgroundTint="@color/yellow_500"
         style="@style/Theme.APIQueryApplication.BtnMain"
-        android:text="@string/albums" />
+        android:text="@string/albums"
+        app:backgroundTint="@color/black"
+        app:strokeColor="@color/yellow_500"
+        app:strokeWidth="2dp" />
 
 </LinearLayout>

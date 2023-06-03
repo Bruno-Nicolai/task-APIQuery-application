@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.Collections;
 import java.util.List;
 
 import bruno.nicolai.app_api_query.R;
@@ -17,8 +18,8 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
 
     private List<User> usersList;
 
-    public UsersAdapter(List<User> usersList) {
-        this.usersList = usersList;
+    public UsersAdapter(List<User> usersListList) {
+        this.usersList = usersListList;
     }
 
     @NonNull
@@ -41,6 +42,31 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
         ((TextView) holder.view.findViewById(R.id.tv_website_user)).setText(user.getWebsite());
         ((TextView) holder.view.findViewById(R.id.tv_address_street_user)).setText(user.getAddress().getStreet());
         ((TextView) holder.view.findViewById(R.id.tv_address_city_user)).setText(user.getAddress().getCity());
+    }
+
+    public void sortUsers(User.SortOrder sortOrder) {
+        switch (sortOrder) {
+            case ASCENDING:
+                sortByAscendingName();
+                break;
+            case DESCENDING:
+                sortByDescendingName();
+                break;
+            case DEFAULT:
+            default:
+                break;
+        }
+    }
+
+
+    public void sortByAscendingName() {
+        Collections.sort(usersList, new User.UserNameComparator());
+        notifyDataSetChanged();
+    }
+
+    public void sortByDescendingName() {
+        Collections.sort(usersList, Collections.reverseOrder(new User.UserNameComparator()));
+        notifyDataSetChanged();
     }
 
     @Override

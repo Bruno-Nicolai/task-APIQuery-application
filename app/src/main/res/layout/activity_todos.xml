@@ -4,34 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     tools:context=".views.TodosActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_todos"
         style="@style/Theme.APIQueryApplication.Toolbar"
-        android:background="@color/green_500"
+        android:background="@color/green_900"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-        app:titleTextColor="@color/green_900" />
+        app:titleTextColor="@color/green_500" />
 
     <Button
         android:id="@+id/todos_btn_search_all"
         style="@style/Theme.APIQueryApplication.Button"
         android:text="@string/getAllTodos"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_todos" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_todos"
-        app:layout_constraintTop_toBottomOf="@+id/todos_btn_search_all"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        tools:listitem="@layout/item_todo"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todos_btn_search_all"
+        tools:listitem="@layout/item_todo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

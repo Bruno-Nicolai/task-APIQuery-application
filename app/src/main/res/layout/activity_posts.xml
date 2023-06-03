@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     tools:context=".views.PostsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_posts"
         style="@style/Theme.APIQueryApplication.Toolbar"
-        android:background="@color/blue_500"
+        android:background="@color/blue_900"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-        app:titleTextColor="@color/blue_900" />
+        app:titleTextColor="@color/blue_500" />
 
     <Button
         android:id="@+id/posts_btn_search_all"
@@ -26,12 +27,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_posts"
-        app:layout_constraintTop_toBottomOf="@+id/posts_btn_search_all"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        tools:listitem="@layout/item_post"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/posts_btn_search_all"
+        tools:listitem="@layout/item_post" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
